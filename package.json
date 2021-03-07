@@ -1,0 +1,39 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "author": "ujon",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf build",
+    "start": "APP_STAGE=dev ts-node -r tsconfig-paths/register ./src/index",
+    "start:dev": "yarn clean && APP_STAGE=dev webpack -w",
+    "start:local": "APP_STAGE=dev node build/server",
+    "start:prod": "APP_STAGE=prod node build/server",
+    "build:dev": "yarn clean && APP_STAGE=dev webpack",
+    "build:prod": "yarn clean && APP_STAGE=pord webpack"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.21.0",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "graphql-compose": "^7.25.0",
+    "graphql-compose-mongoose": "^9.1.0",
+    "graphql-upload": "^11.0.0",
+    "mongoose": "^5.11.18"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/express": "^4.17.11",
+    "@types/mongoose": "^5.10.3",
+    "@types/node": "^14.14.31",
+    "dotenv": "^8.2.0",
+    "nodemon-webpack-plugin": "^4.4.4",
+    "ts-loader": "^8.0.17",
+    "tsconfig-paths": "^3.9.0",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "typescript": "^4.2.2",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-node-externals": "^2.5.2"
+  }
+}

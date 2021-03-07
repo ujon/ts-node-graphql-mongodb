@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+
+# Files
+.env
+.env.*
+yarn-error.log
+
+# Directories
+node_modules
+build
